@@ -44,7 +44,7 @@ class LearningAgent(Agent):
             self.alpha = 0
             self.epsilon = 0
         else:
-                self.alpha = 0.009
+                self.alpha = 0.007
                 self.epsilon = math.exp(-self.time_step * self.alpha)
                 self.time_step = self.time_step + 1
 
@@ -78,9 +78,10 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
 
-        maxQ_key = max(self.Q[self.state], key=(lambda key: self.Q[self.state][key]))
-        maxQ = self.Q[self.state][maxQ_key]
-        return maxQ
+        st = self.Q[state]
+        # adapted from Lucretiel's answer here:  http://stackoverflow.com/questions/268272/getting-key-with-maximum-value-in-dictionary
+        max_key = max(st, key=lambda key: st[key])
+        return st[max_key]
 
 
     def createQ(self, state):
@@ -114,23 +115,19 @@ class LearningAgent(Agent):
         # When not learning, choose a random action
         # When learning, choose a random action with 'epsilon' probability
         #   Otherwise, choose an action with the highest Q-value for the current state
-        if self.learning == True:
-            if self.epsilon > random.random():
-                return random.choice(self.valid_actions)
-            else:
-                maxQ_key = max(self.Q[self.state], key=(lambda key: self.Q[self.state][key]))
-                maxQ_value = self.Q[self.state][maxQ_key]
 
-                top_actions = dict()
-
-                state_dict = self.Q[self.state]
-                for action, reward in state_dict.iteritems():
-                    if reward == maxQ_value:
-                        top_actions[action] = reward
-                action = random.choice(top_actions.keys())
-                return action
-        else:
+        if (self.learning == False) or (self.epsilon > random.random()):
             return random.choice(self.valid_actions)
+        else:
+            max_val = self.get_maxQ(state)
+
+            # to store actions with same max value
+            acts = dict()
+
+            for act, reward in self.Q[state].iteritems():
+                if reward == max_val:
+                    acts[act] = reward
+            return random.choice(acts.keys())
 
 
     def learn(self, state, action, reward):
