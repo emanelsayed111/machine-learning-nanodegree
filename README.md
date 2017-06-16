@@ -5,8 +5,8 @@ __Projects__
 * [Finding Donors for CharityML](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/finding_donors)
 * [Creating Customer Segments](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/customer_segments)
 * [Train a Smartcab to Drive](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/smartcab)
-* Build a Digit Recognition Program (Coming soon)
-* Capstone Project (Coming soon)
+* [Deep Learning Image Classification](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/image-classification)
+* Capstone Project - Deep Reinforcement Learning Project (Coming soon)
 
 See links for individual project requirements.
 
@@ -37,10 +37,10 @@ __Description:__ In the not-so-distant future, taxicab companies across the Unit
 
 ---
 
-## Build a Digit Recognition Program
-__Description:__ In this project, you will use what you've learned about deep neural networks and convolutional neural networks to create a live camera application or program that prints numbers it observes in real time from images it is given. First, you will design and test a model architecture that can identify sequences of digits in an image. Next, you will train that model so it can decode sequences of digits from natural images by using the Street View House Numbers (SVHN) dataset. After the model is properly trained, you will then test your model using a live camera application (optional) or program on newly-captured images. Finally, once you obtain meaningful results, you will refine your implementation to also localize where numbers are on the image, and test this localization on newly-captured images.
+## Deep Learning Image Classification(https://github.com/mtroiani/machine-learning-nanodegree/tree/master/image-classification)
+__Description:__ In this project, you will use what you've learning about deep neural networks and convolutional neural networks to create a model that can classify images with the CIFAR-10 dataset. You'll use TensorFlow to create a model capable of classifying an image into one of 10 different categories, including cats, dogs, birds, trucks, automobiles, and more. 
 
 --- 
 
 ## Capstone Project
-__Description:__ Coming soon. 
+__Description:__ I plan to create an application using reinforcement learning and deep learning to play a game of isolation. Coming soon.  
