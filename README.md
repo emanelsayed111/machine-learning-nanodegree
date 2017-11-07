@@ -6,7 +6,7 @@ __Projects__
 * [Creating Customer Segments](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/customer_segments)
 * [Train a Smartcab to Drive](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/smartcab)
 * [Deep Learning Image Classification](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/image-classification)
-* Capstone Project - Deep Reinforcement Learning Project (Coming soon)
+* [Capstone Project - DQN](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/capstone)
 
 See links for individual project requirements.
 
@@ -37,10 +37,10 @@ __Description:__ In the not-so-distant future, taxicab companies across the Unit
 
 ---
 
-## Deep Learning Image Classification(https://github.com/mtroiani/machine-learning-nanodegree/tree/master/image-classification)
+## [Deep Learning Image Classification](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/image-classification)
 __Description:__ In this project, you will use what you've learning about deep neural networks and convolutional neural networks to create a model that can classify images with the CIFAR-10 dataset. You'll use TensorFlow to create a model capable of classifying an image into one of 10 different categories, including cats, dogs, birds, trucks, automobiles, and more. 
 
 --- 
 
-## Capstone Project
-__Description:__ I plan to create an application using reinforcement learning and deep learning to play a game of isolation. Coming soon.  
+## [Capstone Project](https://github.com/mtroiani/machine-learning-nanodegree/tree/master/capstone)
+__Description:__ Train an agent to drive an under-powered car up a steep hill using a Deep Q network (DQN). This project uses the [MountainCar-v0](https://github.com/openai/gym/wiki/MountainCar-v0) environment from OpenAI-gym. 
